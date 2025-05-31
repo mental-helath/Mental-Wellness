@@ -1,51 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mental Wellness Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafa;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #5b9aa0;
-      color: white;
-      padding: 20px;
+      background: linear-gradient(120deg, #a0d8d3, #d8f0ed);
+      color: #1c3b3f;
+      padding: 40px 20px;
       text-align: center;
     }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
     nav {
-      background: #3a6f75;
-      padding: 10px;
-      text-align: center;
+      background: #2b7a78;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffe66d;
     }
     section {
-      padding: 40px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
     .card {
       background: white;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    footer {
-      background: #3a6f75;
+    .card h2 {
+      margin-top: 0;
+    }
+    button, input[type=submit] {
+      background-color: #2b7a78;
       color: white;
-      text-align: center;
-      padding: 20px;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover, input[type=submit]:hover {
+      background-color: #205d5a;
     }
     iframe {
       width: 100%;
@@ -53,17 +76,51 @@
       border: none;
       border-radius: 10px;
     }
+    form input, form label {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    form input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      background: #def2f1;
+      color: #3a3a3a;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    .social-icons i {
+      margin: 0 10px;
+      font-size: 1.2em;
+      color: #2b7a78;
+    }
     .chatbot-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #5b9aa0;
+      background-color: #2b7a78;
       color: white;
       border: none;
       padding: 15px;
       border-radius: 50%;
       font-size: 20px;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -110,12 +167,12 @@
     <h2>Get Support</h2>
     <p>Fill out the form below to book a free mental wellness session.</p>
     <form>
-      <label>Name:</label><br />
-      <input type="text" required /><br /><br />
-      <label>Email:</label><br />
-      <input type="email" required /><br /><br />
-      <label>Preferred Time:</label><br />
-      <input type="text" required /><br /><br />
+      <label>Name:</label>
+      <input type="text" required />
+      <label>Email:</label>
+      <input type="email" required />
+      <label>Preferred Time:</label>
+      <input type="text" required />
       <input type="submit" value="Book Now" />
     </form>
   </div>
@@ -123,9 +180,14 @@
 
 <footer>
   <p>&copy; 2025 Mental Wellness Hub. All rights reserved.</p>
+  <div class="social-icons">
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-twitter-square"></i>
+  </div>
 </footer>
 
-<!-- Chatbot Button (placeholder) -->
+<!-- Chatbot Button -->
 <button class="chatbot-button" onclick="alert('Chatbot coming soon!')">💬</button>
 
 </body>
